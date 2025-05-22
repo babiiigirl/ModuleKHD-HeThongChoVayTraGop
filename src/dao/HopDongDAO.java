@@ -57,7 +57,7 @@ public class HopDongDAO extends DAO{
                         psKT.setDate(1, new Date(kt.getThoiDiemThanhToan().getTime()));
                         psKT.setDouble(2, kt.getSoTienThanhToan());
                         psKT.setInt(3, hopDongId);
-                        psKT.setNull(4, java.sql.Types.DATE);
+                        psKT.setString(4, "Chưa đến hạn");
                         psKT.executeUpdate();
                     }
                     psKT.close();
