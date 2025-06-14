@@ -112,7 +112,7 @@ public class TinhLichThanhToanFrm extends JFrame implements ActionListener {
 
                 // Tính tiền gốc hàng tháng (cố định)
                 double tienGocHangThang = tongTienVay / thoiHanVay;
-                // Chuyển lãi suất từ %/năm sang %/tháng
+
                 double laiSuatThang = laiSuat / thoiHanVay / 100;
                 
                 double duNoConLai = tongTienVay;
@@ -122,12 +122,12 @@ public class TinhLichThanhToanFrm extends JFrame implements ActionListener {
                 hopDong.setNgayKy(ngayKy);
 
                 for (int i = 1; i <= thoiHanVay; i++) {
-                    // Tính lãi suất dựa trên dư nợ còn lại
+                    // lãi suất dựa trên dư nợ còn lại
                     double tienLai = duNoConLai * laiSuatThang;
-                    // Tổng số tiền phải trả trong tháng
+                    // tổng số tiền phải trả trong tháng
                     double soTienPhaiThanhToan = tienGocHangThang + tienLai;
                     
-                    // Cập nhật dư nợ còn lại
+                    // dư nợ còn lại
                     duNoConLai -= tienGocHangThang;
 
                     Date thoiDiemThanhToan = cal.getTime();
